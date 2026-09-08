@@ -3,6 +3,13 @@
     margin: 0;
     box-sizing: border-box;
 }
+:root{
+    background-color: #00838C;
+    background-color: #09757A;
+    background-color: #D8EFEF;
+    background-color: #111111;
+    background-color: #FFFFFF;
+}
 .nav-link{
     color: white !important; 
 }
