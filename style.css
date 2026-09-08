@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    background-color: #00838C;
+    background-color: #09757A;
+    background-color: #D8EFEF;
+    background-color: #111111;
+    background-color: #FFFFFF;
+}
+.nav-link{
+    color: white !important; 
+}
+.icono{
+    height: 40px;
+    width: auto;
+}
+.container{
+    min-height: 100px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0px 0px 39px 5px rgba(0, 0, 0, 0.5);
+-webkit-box-shadow: 0px 0px 39px 5px rgba(0, 0, 0, 0.5);
+}
+.containerinput{
+    min-width: 870px;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.input{
+   min-width: 500px;
+    min-height: 70px;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    border: none;
+}
+.botondominios{
+    min-height: 70px;
+    min-width: 170px;
+    background-color: #09757A;
+    color: white;
+    border-radius: 12px;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 600;
+    border: none;
+}
+.containerprecio{
+    
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+.fyi{
+     font-family: "Archivo Black", sans-serif;
+     font-weight: 600;
+     font-size: 24px;
+}
+.textoprecio{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 8px;
+}
+.precio{
+    font-weight: bold;
+}
+.descripcion{
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+
+}
