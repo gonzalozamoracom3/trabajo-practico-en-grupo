@@ -75,3 +75,343 @@
     margin-bottom: 20px;
 
 }
+
+/* inicio video containe  */
+
+.video-section {
+    height: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: visible;
+    animation: videoScroll linear both;
+    animation-timeline: scroll();
+    max-width: none;
+    max-height: none;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+
+
+.video-container video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+}
+
+
+/* =========================
+   IMAGEN DE ARRIBA
+   ========================= */
+
+.imagen-arriba {
+    position: absolute;
+    z-index: 10;
+
+    width: 30%;
+    max-width: 350px;
+    height: auto;
+
+    left: 50%;
+    top: 20px;
+
+    transform: translateX(-50%);
+
+    display: block;
+}
+
+
+/* =========================
+   TARJETA BLANCA
+   ========================= */
+
+.oferta {
+    position: absolute;
+    z-index: 20;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    top: 250px;
+
+    width: 90%;
+    max-width: 900px;
+
+    min-height: 105px;
+
+    padding: 18px 20px;
+
+    background: white;
+    border-radius: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    color: #111;
+}
+
+
+/* Parte izquierda */
+
+.oferta-izquierda {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    min-width: 260px;
+}
+
+.oferta-izquierda span {
+    width: fit-content;
+
+    padding: 3px 7px;
+
+    background: #d9c5ff;
+    border-radius: 5px;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.oferta-izquierda strong {
+    font-size: 24px;
+}
+
+
+/* Parte central */
+
+.oferta-centro {
+    text-align: center;
+}
+
+.oferta-centro strong {
+    font-size: 28px;
+}
+
+.oferta-centro p {
+    margin: 5px 0 0;
+
+    font-size: 18px;
+}
+
+
+/* Botón */
+
+.oferta button {
+    border: 0;
+
+    background: #111;
+    color: white;
+
+    height: 64px;
+    min-width: 250px;
+
+    border-radius: 8px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   TEXTO MAPACHE
+   ========================= */
+
+.texto {
+    position: absolute;
+
+    left: 50%;
+    top: 80%;
+
+    z-index: 9999;
+
+    transform: translate(-50%, -50%);
+
+    font-size: clamp(40px, 8vh, 120px);
+
+    font-weight: 900;
+    letter-spacing: 10px;
+
+    color: purple;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    animation: aparecerTexto linear both;
+    animation-timeline: scroll();
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   ANIMACIÓN DEL VÍDEO
+   ========================= */
+
+@keyframes videoScroll {
+
+    0% {
+        height: 100vh;
+    }
+
+    15% {
+        height: 150vh;
+    }
+
+    20% {
+        height: 250vh;
+    }
+
+    30% {
+        height: 300vh;
+    }
+
+    40% {
+        height: 200vh;
+    }
+}
+
+
+/* =========================
+   ANIMACIÓN DEL TEXTO
+   ========================= */
+
+@keyframes aparecerTexto {
+
+    0% {
+        opacity: 0;
+    }
+   
+
+    70% {
+        opacity: 1;
+    }
+
+    82% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* =====================================
+   TRUSTPILOT
+===================================== */
+
+.trustpilot-bar {
+    width: 100%;
+    height: 135px;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Arial, sans-serif;
+}
+
+.trustpilot-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    color: #111;
+}
+
+.trustpilot-texto {
+    font-size: 16px;
+}
+
+.trustpilot-excelente {
+    font-size: 20px;
+}
+
+.trustpilot-separador {
+    width: 1px;
+    height: 26px;
+
+    background: #d5d5d5;
+
+    margin: 0 5px;
+}
+
+.trustpilot-estrellas {
+    display: flex;
+    gap: 2px;
+}
+
+.trustpilot-estrellas span {
+    width: 23px;
+    height: 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #00b67a;
+    color: white;
+
+    font-size: 16px;
+}
+
+.trustpilot-puntuacion {
+    font-size: 16px;
+}
+
+.trustpilot-puntuacion strong {
+    font-weight: 700;
+}
+
+.trustpilot-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 20px;
+}
+
+.trustpilot-logo span {
+    color: #00b67a;
+    font-size: 35px;
+}
+
+/* fin video container */
