@@ -1,94 +1,113 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
 }
-:root{
-    background-color: #00838C;
-    background-color: #09757A;
-    background-color: #D8EFEF;
-    background-color: #111111;
-    background-color: #FFFFFF;
+
+:root {
+    --color-principal: #09757A;
+    --color-secundario: #D8EFEF;
+    --color-negro: #111111;
+    --color-blanco: #FFFFFF;
 }
-.nav-link{
-    color: white !important; 
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    background-color: var(--color-blanco);
 }
-.icono{
+
+.nav-link {
+    color: white !important;
+}
+
+.icono {
     height: 40px;
     width: auto;
 }
-.container{
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+========================= */
+
+.container {
     min-height: 100px;
     border-radius: 12px;
     background-color: white;
     box-shadow: 0px 0px 39px 5px rgba(0, 0, 0, 0.5);
--webkit-box-shadow: 0px 0px 39px 5px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 0px 39px 5px rgba(0, 0, 0, 0.5);
 }
-.containerinput{
+
+.containerinput {
     min-width: 870px;
     min-height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 }
-.input{
-   min-width: 500px;
+
+.input {
+    min-width: 500px;
     min-height: 70px;
     font-family: "Archivo Black", sans-serif;
     font-size: 28px;
     font-weight: 700;
     border: none;
+    outline: none;
 }
-.botondominios{
+
+.botondominios {
     min-height: 70px;
     min-width: 170px;
-    background-color: #09757A;
+    background-color: var(--color-principal);
     color: white;
     border-radius: 12px;
     font-family: "Archivo Black", sans-serif;
     font-weight: 600;
     border: none;
 }
-.containerprecio{
-    
+
+/* =========================
+   PRECIO
+========================= */
+
+.containerprecio {
     margin-left: 20px;
     display: flex;
     align-items: center;
 }
-.fyi{
-     font-family: "Archivo Black", sans-serif;
-     font-weight: 600;
-     font-size: 24px;
+
+.fyi {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
 }
-.textoprecio{
+
+.textoprecio {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
     margin-left: 8px;
 }
-.precio{
+
+.precio {
     font-weight: bold;
 }
-.descripcion{
+
+.descripcion {
     font-size: 0.85rem;
     margin-bottom: 20px;
-
 }
 
+/* =========================
+   CARDS
+========================= */
 
-body{
-   width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column; /* Apila el título, los botones y las tarjetas hacia abajo */
-    align-items: center;    /* Centra todo horizontalmente */
-    font-family: sans-serif;
-
-}
-
-.contenedor{
+.contenedor {
     width: 100%;
     display: flex;
     max-width: 1100px;
@@ -97,24 +116,105 @@ body{
     gap: 20px;
 }
 
-.card{
+.card {
     width: 400px;
     max-width: 400px;
     border-radius: 6px;
     overflow: hidden;
     background-color: #fff;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2) ;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
     cursor: default;
     transition: all 400ms ease;
     text-align: center;
-
 }
 
-.card:hover{
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4) ;
+.card:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
     transform: translateY(-3%);
 }
-/* inicio video containe  */
+
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.card .contenido {
+    padding: 15px;
+    text-align: center;
+}
+
+.card .contenido p {
+    line-height: 1.5;
+    color: #6a6a6a;
+}
+
+.card .contenido h3 {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.card .contenido a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: #2fb4cc;
+    border: 1px solid #2fb4cc;
+    border-radius: 4px;
+    transition: all 400ms ease;
+}
+
+.card .contenido a:hover {
+    background: #2fb4cc;
+    color: #fff;
+}
+
+div h3 {
+    text-align: center;
+    padding: 5%;
+}
+
+.contenedor > a {
+    text-decoration: none;
+    display: inline-block;
+    color: #2fb4cc;
+    border: 1px solid #2fb4cc;
+    margin: 10%;
+    padding-bottom: 3px;
+    border-radius: 4px;
+    transition: all 400ms ease;
+}
+
+.titulo {
+    padding: 2%;
+}
+
+.butones {
+    padding-bottom: 3%;
+    margin: 10px;
+}
+
+.butones a {
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    padding-top: 2%;
+    border-radius: 4px;
+    transition: all 400ms ease;
+    display: inline-block;
+}
+
+/* =========================
+   VIDEO
+========================= */
+
+.videoos {
+    width: 75%;
+}
 
 .video-section {
     height: 200vh;
@@ -138,164 +238,6 @@ body{
     max-height: none;
     z-index: 1;
     flex-shrink: 0;
-
-}
-
-
-.card img{
-    width: 100%;
-  height: 210px;
-  object-fit: cover;
-
-}  
-
-.card .contenido {
-    padding: 15px;
-    text-align: center;
-}
-
-.card .contenido p{
-    line-height: 1.5;
-    color: #6a6a6a;
-
-
-}
-
-.card .contenido h3{
-    font-weight: 400;
-    margin-bottom: 15px;
-
-}
-
-.card .contenido a{
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px;
-    margin-top: 10px;
-    color: #2fb4cc;
-    border: 1px solid  #2fb4cc;
-    border-radius: 4px;
-     transition: all 400ms ease;
-}
-
-.card .contenido a:hover{
-    background: #2fb4cc;
-    color: #fff;
-}
-
-div h3{
-    text-align: center;
-    padding: 5%;
-}
-
-.contenedor > a{
-    text-decoration: none;
-    display: inline-block;
-    color: #2fb4cc;
-    border: 1px solid  #2fb4cc;
-    margin: 10%;
-    padding-bottom: 3px;
-    border-radius: 4px;
-    transition: all 400ms ease;
-}
-
-.titulo{
-    padding: 2%;
-}
-
-.butones{
-    padding-bottom: 3%;
-    margin: 10px;
-    
-}
-
-.butones a{
-    width: 250px;
-    height: 50px;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    border: 2px solid black;
-    padding-top: 2%;
-    border-radius: 4px;
-    transition: all 400ms ease;
-    display: inline-block;
-}
-
-.videoos{
-    width: 75%;
-
-}
-
-.contenedor2{
-    width: 100%;
-    display: flex;
-    max-width: 1100px;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin: 20px;
-}
-
-.card1{
-    width: 350px;
-    max-width: 350px;
-    border-radius: 6px;
-    overflow: hidden;
-    background-color: #D8EFEF;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2) ;
-    cursor: default;
-    transition: all 400ms ease;
-    text-align: center;
-    padding: 10px;
-}
-
-.card1:hover{
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4) ;
-    transform: translateY(-3%);
-}
-
-
-
-.card1 .contenido p{
-    line-height: 1.5;
-    color: #6a6a6a;
-
-
-}
-
-.card1 h3{
-    text-align: left;
-}
-
-.card1 p{
-    text-align: left;
-    
-}
-
-.btn{
-     display: inline-flex;
-  align-items: center;
-  gap: 8px; /* Espacio entre el texto y la flecha */
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn a{
-    text-decoration: none;
-    text-align: center;
-}
-
-.btn h4{
-    color: white;
-}
-
-.btn b{
-    font-weight: normal;
 }
 
 .video-container video {
@@ -307,79 +249,57 @@ div h3{
     top: 0;
 }
 
-
 /* =========================
    IMAGEN DE ARRIBA
-   ========================= */
+========================= */
 
 .imagen-arriba {
     position: absolute;
     z-index: 10;
-
     width: 30%;
     max-width: 350px;
     height: auto;
-
     left: 50%;
     top: 20px;
-
     transform: translateX(-50%);
-
     display: block;
 }
 
-
 /* =========================
-   TARJETA BLANCA
-   ========================= */
+   TARJETA OFERTA
+========================= */
 
 .oferta {
     position: absolute;
     z-index: 20;
-
     left: 50%;
     transform: translateX(-50%);
-
     top: 250px;
-
     width: 90%;
     max-width: 900px;
-
     min-height: 105px;
-
     padding: 18px 20px;
-
     background: white;
     border-radius: 22px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 25px;
-
     color: #111;
 }
-
-
-/* Parte izquierda */
 
 .oferta-izquierda {
     display: flex;
     flex-direction: column;
     gap: 6px;
-
     min-width: 260px;
 }
 
 .oferta-izquierda span {
     width: fit-content;
-
     padding: 3px 7px;
-
     background: #d9c5ff;
     border-radius: 5px;
-
     font-size: 10px;
     font-weight: 800;
 }
@@ -387,9 +307,6 @@ div h3{
 .oferta-izquierda strong {
     font-size: 24px;
 }
-
-
-/* Parte central */
 
 .oferta-centro {
     text-align: center;
@@ -401,69 +318,47 @@ div h3{
 
 .oferta-centro p {
     margin: 5px 0 0;
-
     font-size: 18px;
 }
-
-
-/* Botón */
 
 .oferta button {
     border: 0;
-
     background: #111;
     color: white;
-
     height: 64px;
     min-width: 250px;
-
     border-radius: 8px;
-
     font-size: 18px;
     font-weight: 700;
-
     cursor: pointer;
 }
 
-
 /* =========================
    TEXTO MAPACHE
-   ========================= */
+========================= */
 
 .texto {
     position: absolute;
-
     left: 50%;
     top: 80%;
-
     z-index: 9999;
-
     transform: translate(-50%, -50%);
-
     font-size: clamp(40px, 8vh, 120px);
-
     font-weight: 900;
     letter-spacing: 10px;
-
     color: purple;
-
     opacity: 0;
-
     pointer-events: none;
-
     animation: aparecerTexto linear both;
     animation-timeline: scroll();
-
     white-space: nowrap;
 }
 
-
 /* =========================
-   ANIMACIÓN DEL VÍDEO
-   ========================= */
+   ANIMACIÓN VIDEO
+========================= */
 
 @keyframes videoScroll {
-
     0% {
         height: 100vh;
     }
@@ -485,17 +380,14 @@ div h3{
     }
 }
 
-
 /* =========================
-   ANIMACIÓN DEL TEXTO
-   ========================= */
+   ANIMACIÓN TEXTO
+========================= */
 
 @keyframes aparecerTexto {
-
     0% {
         opacity: 0;
     }
-   
 
     70% {
         opacity: 1;
@@ -522,21 +414,17 @@ div h3{
     }
 }
 
-
-/* =====================================
+/* =========================
    TRUSTPILOT
-===================================== */
+========================= */
 
 .trustpilot-bar {
     width: 100%;
     min-height: 35px;
-
     background: white;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-family: Arial, sans-serif;
 }
 
@@ -544,9 +432,7 @@ div h3{
     display: flex;
     align-items: center;
     justify-content: center;
-
     gap: 15px;
-
     color: #111;
 }
 
@@ -561,9 +447,7 @@ div h3{
 .trustpilot-separador {
     width: 1px;
     height: 26px;
-
     background: #d5d5d5;
-
     margin: 0 5px;
 }
 
@@ -575,14 +459,11 @@ div h3{
 .trustpilot-estrellas span {
     width: 23px;
     height: 23px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: #00b67a;
     color: white;
-
     font-size: 16px;
 }
 
@@ -597,9 +478,7 @@ div h3{
 .trustpilot-logo {
     display: flex;
     align-items: center;
-
     gap: 7px;
-
     font-size: 20px;
 }
 
@@ -608,114 +487,426 @@ div h3{
     font-size: 35px;
 }
 
-/* fin video container */
+/* =========================
+   GRID 5 CARDS
+========================= */
 
-/* inicio 5 card /nico */
-.gridcontainer{
+.gridcontainer {
     display: grid;
     height: calc(100vh - 60px);
-    grid-template-columns: repeat(3,430px);
-    grid-template-rows: repeat(3,285px);
+    grid-template-columns: repeat(3, 430px);
+    grid-template-rows: repeat(3, 285px);
     gap: 8px;
 }
-.box{
+
+.box {
     border-radius: 12px;
     background-color: rgb(231, 231, 231);
 }
-.box:nth-child(5){
+
+.box:nth-child(5) {
     grid-column: span 2;
 }
-.box1{
+
+.box1 {
     text-align: center;
 }
-.img1{
+
+.img1 {
     margin-left: 70px;
     margin-top: 20px;
 }
-.box2 >h1{
+
+.box2 > h1 {
     margin-left: 30px;
 }
-.img2{
+
+.img2 {
     width: 240px;
     height: 120px;
     margin-left: 185px;
     margin-top: 20px;
 }
-.img3{
+
+.img3 {
     width: 60px;
     height: 60px;
     margin-top: 50px;
 }
-.box3 >h1{
+
+.box3 > h1 {
     margin-left: 20px;
 }
-.box4{
+
+.box4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.box4 >h1{
+
+.box4 > h1 {
     margin-left: 30px;
 }
-.box5{
+
+.box5 {
     display: flex;
 }
-.box5 >h1{
+
+.box5 > h1 {
     margin-left: 30px;
     padding: 30px;
 }
-.img5{
+
+.img5 {
     width: 400px;
     height: 250px;
     padding-top: 40px;
-
 }
 
-/* final 5 card / nico */
+/* =========================
+   IMAGEN + TEXTO
+========================= */
 
-/* inicio imagen chica /nico  */
-
-.containerimagen{
-    width: 100vw;
+.containerimagen {
+    width: 100%;
     height: 500px;
     display: flex;
     margin-top: 70px;
     position: relative;
+    overflow: hidden;
 }
-.imgfondo{
+
+.imgfondo {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.texto{
+
+/*
+   IMPORTANTE:
+   Separamos este texto del .texto del video
+*/
+
+.texto-imagen {
     position: absolute;
-    margin-left: 50px;
-    margin-top: 60px
+    left: 50px;
+    top: 60px;
+    margin: 0;
 }
-.descripcion{
+
+.descripcion-imagen {
     position: absolute;
-    margin-left: 750px;
+    right: 50px;
+    top: 0;
     height: 500px;
     width: 610px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
-.botondescripcion{
+
+.botondescripcion {
     width: 140px;
     height: 50px;
-    background-color:black;
+    background-color: black;
     border-radius: 8px;
     color: white;
     margin-top: 8px;
+    border: none;
+    cursor: pointer;
 }
-.h1descripcion{
+
+.h1descripcion {
     font-family: "Rubik", sans-serif;
     font-size: 44px;
 }
-.pdescripcion{
+
+.pdescripcion {
     font-size: 22px;
 }
 
+/* =========================
+   CARRUSEL 1
+========================= */
 
+.plantillas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
-/* fin imagen chica/ nico */
+.carrusel {
+    width: 100%;
+    overflow: hidden;
+    padding: 45px 0 50px;
+}
 
+.carrusel-contenedor {
+    display: flex;
+    width: max-content;
+    gap: 35px;
+    animation: moverCarrusel 30s linear infinite;
+}
+
+.tarjeta {
+    width: 750px;
+    height: 420px;
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #111;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.tarjeta::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.tarjeta:hover::after {
+    opacity: 1;
+}
+
+.botones-hover {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.tarjeta:hover .botones-hover {
+    opacity: 1;
+}
+
+.boton-flecha {
+    min-width: 180px;
+    padding: 16px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border: none;
+    border-radius: 50px;
+    background: white;
+    color: #111;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton-flecha b {
+    opacity: 0;
+    transform: translateX(-8px);
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.boton-flecha:hover b {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.boton-preview {
+    padding: 10px 20px;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.boton-preview:hover {
+    opacity: 0.7;
+}
+
+.tarjeta:hover img {
+    transform: scale(1.05);
+}
+
+@keyframes moverCarrusel {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 17.5px));
+    }
+}
+
+.carrusel:hover .carrusel-contenedor {
+    animation-play-state: paused;
+}
+
+.boton-plantillas {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px 45px;
+}
+
+.boton-plantillas button {
+    width: 380px;
+    height: 64px;
+    border: none;
+    border-radius: 7px;
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.boton-plantillas button:hover {
+    background: #222;
+}
+
+/* =========================
+   CARRUSEL DE TEXTO
+========================= */
+
+.carrusel-texto {
+    width: 100%;
+    overflow: hidden;
+    background: #a8f5f1;
+    padding: 45px 0;
+    white-space: nowrap;
+}
+
+.carrusel-texto-contenedor {
+    display: flex;
+    width: max-content;
+    animation: moverTexto 25s linear infinite;
+}
+
+.carrusel-texto-grupo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 30px;
+    padding-right: 30px;
+}
+
+.carrusel-texto-grupo span {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #111;
+    line-height: 1;
+}
+
+.carrusel-texto-grupo span:first-child {
+    font-weight: 700;
+}
+
+.carrusel-texto-grupo b {
+    font-size: 25px;
+    color: #111;
+    line-height: 1;
+}
+
+@keyframes moverTexto {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.carrusel-texto:hover .carrusel-texto-contenedor {
+    animation-play-state: paused;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .containerinput {
+        min-width: 90%;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .input {
+        min-width: 100%;
+        width: 100%;
+        font-size: 22px;
+    }
+
+    .botondominios {
+        width: 100%;
+    }
+
+    .gridcontainer {
+        width: 95%;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .box:nth-child(5) {
+        grid-column: auto;
+    }
+
+    .containerimagen {
+        height: auto;
+        min-height: 600px;
+        flex-direction: column;
+    }
+
+    .descripcion-imagen {
+        position: relative;
+        right: auto;
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .texto-imagen {
+        left: 20px;
+        top: 20px;
+    }
+
+    .tarjeta {
+        width: 90vw;
+        height: 50vw;
+    }
+
+    .oferta {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .oferta-izquierda {
+        align-items: center;
+    }
+}
