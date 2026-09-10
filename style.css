@@ -490,24 +490,28 @@ div h3 {
 /* =========================
    GRID 5 CARDS
 ========================= */
-
-.gridcontainer {
-    display: grid;
-    height: calc(100vh - 60px);
-    grid-template-columns: repeat(3, 430px);
+.container.gridcontainer {
+   display: grid;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 285px);
     gap: 8px;
+    width: 100%;
+    max-width: 1316px;
+    margin: 0 auto;
 }
 
 .box {
     border-radius: 12px;
     background-color: rgb(231, 231, 231);
+    overflow: hidden;
 }
 
+/* BOX 5 ocupa DOS columnas */
 .box:nth-child(5) {
     grid-column: span 2;
 }
 
+/* BOX 1 */
 .box1 {
     text-align: center;
 }
@@ -517,6 +521,7 @@ div h3 {
     margin-top: 20px;
 }
 
+/* BOX 2 */
 .box2 > h1 {
     margin-left: 30px;
 }
@@ -528,6 +533,7 @@ div h3 {
     margin-top: 20px;
 }
 
+/* BOX 3 */
 .img3 {
     width: 60px;
     height: 60px;
@@ -538,6 +544,7 @@ div h3 {
     margin-left: 20px;
 }
 
+/* BOX 4 */
 .box4 {
     display: flex;
     flex-direction: column;
@@ -548,21 +555,28 @@ div h3 {
     margin-left: 30px;
 }
 
+/* BOX 5 */
 .box5 {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
 }
 
 .box5 > h1 {
-    margin-left: 30px;
-    padding: 30px;
+    margin: 0;
+    padding: 0;
+    flex: 1;
 }
 
 .img5 {
     width: 400px;
     height: 250px;
     padding-top: 40px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
-
 /* =========================
    IMAGEN + TEXTO
 ========================= */
