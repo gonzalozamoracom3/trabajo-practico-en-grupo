@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
 :root{
     background-color: #00838C;
@@ -528,7 +529,7 @@ div h3{
 
 .trustpilot-bar {
     width: 100%;
-    height: 135px;
+    min-height: 35px;
 
     background: white;
 
@@ -608,4 +609,113 @@ div h3{
 }
 
 /* fin video container */
+
+/* inicio 5 card /nico */
+.gridcontainer{
+    display: grid;
+    height: calc(100vh - 60px);
+    grid-template-columns: repeat(3,430px);
+    grid-template-rows: repeat(3,285px);
+    gap: 8px;
+}
+.box{
+    border-radius: 12px;
+    background-color: rgb(231, 231, 231);
+}
+.box:nth-child(5){
+    grid-column: span 2;
+}
+.box1{
+    text-align: center;
+}
+.img1{
+    margin-left: 70px;
+    margin-top: 20px;
+}
+.box2 >h1{
+    margin-left: 30px;
+}
+.img2{
+    width: 240px;
+    height: 120px;
+    margin-left: 185px;
+    margin-top: 20px;
+}
+.img3{
+    width: 60px;
+    height: 60px;
+    margin-top: 50px;
+}
+.box3 >h1{
+    margin-left: 20px;
+}
+.box4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.box4 >h1{
+    margin-left: 30px;
+}
+.box5{
+    display: flex;
+}
+.box5 >h1{
+    margin-left: 30px;
+    padding: 30px;
+}
+.img5{
+    width: 400px;
+    height: 250px;
+    padding-top: 40px;
+
+}
+
+/* final 5 card / nico */
+
+/* inicio imagen chica /nico  */
+
+.containerimagen{
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    margin-top: 70px;
+    position: relative;
+}
+.imgfondo{
+    width: 100%;
+}
+.texto{
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 60px
+}
+.descripcion{
+    position: absolute;
+    margin-left: 750px;
+    height: 500px;
+    width: 610px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.botondescripcion{
+    width: 140px;
+    height: 50px;
+    background-color:black;
+    border-radius: 8px;
+    color: white;
+    margin-top: 8px;
+}
+.h1descripcion{
+    font-family: "Rubik", sans-serif;
+    font-size: 44px;
+}
+.pdescripcion{
+    font-size: 22px;
+}
+
+
+
+/* fin imagen chica/ nico */
 
