@@ -98,7 +98,7 @@ body {
     font-weight: bold;
 }
 
-.descripcion {
+.descripcion1{
     font-size: 0.85rem;
     margin-bottom: 20px;
 }
@@ -595,14 +595,13 @@ div h3 {
    Separamos este texto del .texto del video
 */
 
-.texto-imagen {
+.texto {
     position: absolute;
-    left: 50px;
-    top: 60px;
-    margin: 0;
+    margin-left: 50px;
+    margin-top: 60px;
 }
 
-.descripcion-imagen {
+.descripcion {
     position: absolute;
     right: 50px;
     top: 0;
